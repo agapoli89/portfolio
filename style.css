@@ -39,7 +39,7 @@ body {
     transition: opacity 2s;
 }
 
-.square {
+.start__square {
     width: 35vmin;
     height: 35vmin;
     background-color: var(--light-two-color);
@@ -55,19 +55,19 @@ body {
     transition: opacity 1s;
 }
 
-img {
+.start__img {
     width: 20vmin;
     height: auto;
 }
 
-.welcome {
+.start__welcome {
     background-color: transparent;
     color: var(--light-two-color);
     justify-content: center;
     cursor: default;
 }
 
-.works {
+.start__works {
     background-color: var(--semi-dark-one-color);
     color: var(--light-two-color);
     font-size: 30px;
@@ -78,18 +78,18 @@ h3 {
     text-align: center;
 }
 
-p {
+.start__text {
     margin-bottom: 5vmin;
     margin-top: 2vmin;
     font-size: 3vmin;
 }
 
-.start:hover > .square {
+.start:hover > .start__square {
     opacity: .5;
     transition: opacity 1s;
 }
 
-.start:hover > .square:hover {
+.start:hover > .start__square:hover {
     opacity: 1;
 }
 
@@ -109,7 +109,7 @@ p {
     display: none;
 }
 
-.content img {
+.content__cross {
     width: 6vmin;
     height: auto;
     position: absolute;
@@ -119,26 +119,26 @@ p {
     cursor: pointer;
 }
 
-.content img:hover {
+.content__cross:hover {
     opacity: 1;
 }
 
-.about-me p {
+.content__about-me p {
     font-size: 2.5vmin;
     margin-top: 2vmin;
     margin-bottom: 2vmin;
 }
 
-.about-me h1 {
+.content__about-me h1 {
     font-size: 4vmin;
 }
 
-.about-me h4 {
+.content__about-me h4 {
     margin-top: 4vmin;
     font-size: 2.5vmin;
 }
 
-.my-tech {
+.content__my-tech {
     width: 100%;
     height: 40%;
     display: flex;
@@ -147,7 +147,7 @@ p {
     flex-wrap: wrap;
 }
 
-.devicon {
+.content__devicon {
     font-size: 8vmin;
     margin: .5vmin;
 }
@@ -158,21 +158,25 @@ p {
     width: 90vw;
     flex-direction: column;
     }
-    .square {
+    .start__square {
         width: 60%;
         height: 21%;
     }
-    .works {
+    .start__works {
         order: 2;
     }
-    .contact {
+    .start__contact {
         order: 3;
     }
-    img {
+    .start__img {
         width: 30%;
         height: auto;
     }
-    .welcome {
+
+    .start__text {
+        margin-top: 0;
+    }
+    .start__welcome {
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -181,22 +185,22 @@ p {
         height: 60vh;
         max-height: 90vh;
     }
-    .about-me p {
+    .content__about-me p {
         font-size: 12px;
         margin-top: 2vmin;
         margin-bottom: 2vmin;
     }
     
-    .about-me h1 {
+    .content__about-me h1 {
         font-size: 20px;
     }
     
-    .about-me h4 {
+    .content__about-me h4 {
         margin-top: 4vmin;
         font-size: 15px;
     }
 
-    .devicon {
+    .content__devicon {
         font-size: 40px;
     }
 }

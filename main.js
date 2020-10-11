@@ -1,9 +1,9 @@
-const squares = document.querySelectorAll('.square');
+const squares = document.querySelectorAll('.start__square');
 
 let i = 0; //pojawiające się kwadraty
 const start = document.querySelector('.start');
 const content = document.querySelectorAll('.content');
-const cross = document.querySelectorAll('.cross')
+const cross = document.querySelectorAll('.content__cross')
 
 const showSquares = setInterval(() => {
     squares[i].classList.remove('hidden');
