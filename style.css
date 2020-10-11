@@ -35,6 +35,10 @@ body {
     letter-spacing: 2px;
 }
 
+.start {
+    transition: opacity 2s;
+}
+
 .square {
     width: 35vmin;
     height: 35vmin;
@@ -51,21 +55,9 @@ body {
     transition: opacity 1s;
 }
 
-.container:hover > .square {
-    opacity: .5;
-    transition: opacity 1s;
-}
-
-.container:hover > .square:hover {
-    opacity: 1;
-}
-
-
-
-.works {
-    background-color: var(--semi-dark-one-color);
-    color: var(--light-two-color);
-    font-size: 30px;
+img {
+    width: 20vmin;
+    height: auto;
 }
 
 .welcome {
@@ -75,14 +67,15 @@ body {
     cursor: default;
 }
 
+.works {
+    background-color: var(--semi-dark-one-color);
+    color: var(--light-two-color);
+    font-size: 30px;
+}
+
 h3 {
     font-size: 4vmin;
     text-align: center;
-}
-
-img {
-    width: 20vmin;
-    height: auto;
 }
 
 p {
@@ -91,3 +84,119 @@ p {
     font-size: 3vmin;
 }
 
+.start:hover > .square {
+    opacity: .5;
+    transition: opacity 1s;
+}
+
+.start:hover > .square:hover {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.content {
+    background-color: var(--semi-dark-one-color);
+    border-radius: 5px;
+    color: var(--light-one-color);
+    opacity: 0;
+    padding: 5vmin;
+    position: relative;
+    transition: opacity 1s;
+    display: none;
+}
+
+.content img {
+    width: 6vmin;
+    height: auto;
+    position: absolute;
+    top: 1vmin;
+    right: 1vmin;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.content img:hover {
+    opacity: 1;
+}
+
+.about-me p {
+    font-size: 2.5vmin;
+    margin-top: 2vmin;
+    margin-bottom: 2vmin;
+}
+
+.about-me h1 {
+    font-size: 4vmin;
+}
+
+.about-me h4 {
+    margin-top: 4vmin;
+    font-size: 2.5vmin;
+}
+
+.my-tech {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    padding-top: 4vmin;
+    flex-wrap: wrap;
+}
+
+.devicon {
+    font-size: 8vmin;
+    margin: .5vmin;
+}
+
+@media (max-width: 410px) {
+    .container {
+    height: 90vh;
+    width: 90vw;
+    flex-direction: column;
+    }
+    .square {
+        width: 60%;
+        height: 21%;
+    }
+    .works {
+        order: 2;
+    }
+    .contact {
+        order: 3;
+    }
+    img {
+        width: 30%;
+        height: auto;
+    }
+    .welcome {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .content{
+        height: 60vh;
+        max-height: 90vh;
+    }
+    .about-me p {
+        font-size: 12px;
+        margin-top: 2vmin;
+        margin-bottom: 2vmin;
+    }
+    
+    .about-me h1 {
+        font-size: 20px;
+    }
+    
+    .about-me h4 {
+        margin-top: 4vmin;
+        font-size: 15px;
+    }
+
+    .devicon {
+        font-size: 40px;
+    }
+}

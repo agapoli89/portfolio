@@ -7,22 +7,62 @@
     <title>My portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="square"><img src="img/aboutme.png" alt="">
+    <div class="container start">
+        <div class="square hidden" data-number="0">
+            <img src="img/aboutme.png" alt="">
             <p>Słowo o mnie</p>
         </div>
-        <div class="square"><img src="img/phone.png" alt="">
+        <div class="square contact hidden" data-number="1">
+            <img src="img/phone.png" alt="">
             <p>Kontakt</p>
         </div>
-        <div class="square works"><img src="img/works.png" alt="">
+        <div class="square works hidden" data-number="2">
+            <img src="img/works.png" alt="">
             <p>Moje prace</p>
         </div>
-        <div class="square welcome">
+        <div class="square welcome hidden">
             <h3>Dzień dobry! Fajnie, że jesteś :)</h3>
         </div>
+    </div>
+    <div class="container content about-me hidden">
+        <img src="img/cross.png" alt="" class="cross" data-number="0">
+        <h1>O mnie:</h1>
+        <p>Miłośniczka psów, rowerów miejskich, kuchni roślinnej i górskich wędrówek.</p>
+        <p>Mimo, że wykształcenie mam humanistyczne, coraz bardziej pochłania mnie programowanie. Potrafię spędzać godziny analizując i udoskonalając kod, co jak do tej pory sprawia mi olbrzymią frajdę :)</p>
+        <h4>Technologie:</h4>
+        <div class="my-tech">
+            <i class="devicon devicon-javascript-plain"></i>
+            <i class="devicon devicon-html5-plain-wordmark"></i>
+            <i class="devicon devicon-css3-plain-wordmark"></i>
+            <i class="devicon devicon-git-plain"></i>
+            <i class="devicon devicon-github-plain"></i>
+            <i class="devicon devicon-bootstrap-plain-wordmark"></i>
+            <i class="devicon devicon-jquery-plain-wordmark"></i>
+        </div>
+    </div>
+    <div class="container content contact-me hidden">
+        <img src="img/cross.png" alt="" class="cross" data-number="1">
+        <p> <i class="icon-github-circled"></i>
+            <i class="icon-left-2"></i>
+            Tutaj sprawdzisz mój kod</p>
+        <p><i class="icon-phone"></i> 508 071 833</p>
+        <p><i class="icon-mail"></i> agapoli@gmail.com</p>
+        <p>Znajdziesz mnie też przez media społecznościowe:
+            <i class="icon-facebook-squared"></i>
+        <i class="icon-linkedin"></i>
+        </p>
+    </div>
+    <div class="container content my-works hidden">
+        <img src="img/cross.png" alt="" class="cross" data-number="2">
+        <ul>
+            <li>Przewodnik miejski - wizytówka</li>
+            <li>Lista "to-do"</li>
+        </ul>
     </div>
     <script src="main.js"></script>
 </body>
