@@ -43,7 +43,7 @@ a {
 }
 
 .start {
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 
 .start__square {
