@@ -133,7 +133,8 @@ h3 {
 .content__about-me p {
     font-size: 2.5vmin;
     margin-top: 2vmin;
-    margin-bottom: 2vmin;
+    margin-bottom: 2vmin; 
+    text-align: justify; 
 }
 
 .content__about-me h1 {
@@ -141,8 +142,10 @@ h3 {
 }
 
 .content__about-me h4 {
-    margin-top: 4vmin;
+    margin-bottom: 4px;
     font-size: 2.5vmin;
+    width: 100%;
+    text-align: center;
 }
 
 .content__my-tech {
@@ -150,19 +153,19 @@ h3 {
     height: 40%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 4vmin;
+    align-content: center;
     flex-wrap: wrap;
+    margin-top: 5vmin;
 }
 
 .content__devicon {
     font-size: 8vmin;
-    margin: .5vmin;
+    margin: 2vmin;
 }
 
 .content__contact-me {
     padding-top: 5vmin;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
 }
@@ -298,7 +301,7 @@ h3 {
         /* max-height: 90vh; */
     }
     .content__about-me p {
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 2vmin;
         margin-bottom: 2vmin;
     }
@@ -308,8 +311,8 @@ h3 {
     }
     
     .content__about-me h4 {
-        margin-top: 4vmin;
         font-size: 15px;
+        margin-bottom: 10px;
     }
 
     .content__devicon {
