@@ -19,7 +19,6 @@ function backToStart() {
 
     setTimeout(() => {
         const afterTransitionendContent = () => {
-            console.log('transitback');
             content[index].style.display = "none";
             start.style.display = "flex";
             setTimeout(() => {
@@ -37,7 +36,6 @@ function addContent() {
     if (this === squares[3]) {
         return;
     };
-    console.log('addContent');
     const afterTransitionendStart = () => {
         start.style.display = "none";
         if (content[index].classList.contains('content__contact-me')) {
@@ -66,12 +64,16 @@ squares.forEach(square => square.addEventListener('click', addContent));
 
 //my projects:
 
-const myProjects = document.querySelectorAll('.content__links-to-my-works__item');
+const myProjects = document.querySelectorAll('.content__links-to-my-works__frame-to-item');
 
-myProjects.forEach(project => project.addEventListener('mouseover', e => {
-    e.target.style.opacity = "1";
-    e.target.style.color = 'white';
-    if (e.target.classList.contains('content__links-to-my-works__item__guide')) {
-        e.target.textContent = "Przewodnik"
-    }
+myProjects.forEach(project => project.addEventListener('mouseenter', e => {
+    console.log(e.target.firstElementChild);
+
+    e.target.firstElementChild.style.opacity = ".1";
+    e.target.lastElementChild.style.opacity = "1";
+
+    e.target.addEventListener('mouseleave', () => {
+        e.target.firstElementChild.style.opacity = "1";
+        e.target.lastElementChild.style.opacity = "0";
+    })
 }));

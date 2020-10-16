@@ -224,12 +224,27 @@ h3 {
     border-radius: 10px;
 }
 
+.content__links-to-my-works__frame-to-item {
+    position: relative;
+}
+
+.content__links-to-my-works__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    text-align: center;
+    font-size: 2.5vmin;
+}
+
 .content__links-to-my-works__item {
     width: 30vmin;
     height: 17vmin;
     margin: 1vmin;
     border-radius: 5px;
-    background-color: var(--light-two-color);
+    background-color:  rgba(191, 154, 154, 1);
     background-blend-mode: overlay;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -256,6 +271,7 @@ h3 {
     .start__square {
         width: 60%;
         height: 21%;
+        justify-content: center;
     }
     .start__works {
         order: 2;
@@ -269,7 +285,7 @@ h3 {
     }
 
     .start__text {
-        margin-top: 0;
+        margin: 0;
     }
     .start__welcome {
         margin-top: 0;
@@ -277,8 +293,8 @@ h3 {
     }
 
     .content{
-        height: 60vh;
-        max-height: 90vh;
+        height: 90vh;
+        /* max-height: 90vh; */
     }
     .content__about-me p {
         font-size: 12px;
@@ -299,6 +315,18 @@ h3 {
         font-size: 40px;
     }
 
+    .content__contact-methods {
+        font-size: 6vmin;  
+    }
+
+    .content__social-media p {
+        font-size: 5vmin;
+    }
+
+    .content__social-media-items {
+        font-size: 15vmin;
+    }
+
     .content__my-code {
         color: var(--light-one-color);
         font-size: 5vmin;
@@ -306,9 +334,13 @@ h3 {
         margin-bottom: 5vmin;
      }
 
+    .content__links-to-my-works {
+         height: 80%;
+     } 
+
     .content__links-to-my-works__item {
-        width: 60vmin;
-        height: 35vmin;
+        width: 59vmin;
+        height: 33vmin;
         margin: 3vmin;
     }
 }
