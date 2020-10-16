@@ -63,7 +63,8 @@
 .icon-left-outline:before { content: '\e805'; } /* '' */
 .icon-left-1:before { content: '\e806'; } /* '' */
 .icon-left-2:before { content: '\e807'; } /* '' */
-.icon-github-circled:before { content: '\e808'; } /* '' */
+.icon-github-circled:before { content: '\e808';
+  font-size: 6vmin; } /* '' */
 .icon-skype:before { content: '\e809'; } /* '' */
 .icon-linkedin-circled:before { content: '\f05b'; } /* '' */
 .icon-linkedin:before { content: '\f05c'; } /* '' */

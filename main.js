@@ -40,7 +40,11 @@ function addContent() {
     console.log('addContent');
     const afterTransitionendStart = () => {
         start.style.display = "none";
-        content[index].style.display = "block";
+        if (content[index].classList.contains('content__contact-me')) {
+            content[index].style.display = "flex";
+        } else {
+            content[index].style.display = "block";
+        }
         setTimeout(() => {
             content[index].style.opacity = 1;
         }, 100);
@@ -60,3 +64,14 @@ function addContent() {
 
 squares.forEach(square => square.addEventListener('click', addContent));
 
+//my projects:
+
+const myProjects = document.querySelectorAll('.content__links-to-my-works__item');
+
+myProjects.forEach(project => project.addEventListener('mouseover', e => {
+    e.target.style.opacity = "1";
+    e.target.style.color = 'white';
+    if (e.target.classList.contains('content__links-to-my-works__item__guide')) {
+        e.target.textContent = "Przewodnik"
+    }
+}));

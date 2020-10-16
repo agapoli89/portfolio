@@ -21,6 +21,13 @@ body {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     margin: 0;
     padding: 0;
@@ -152,6 +159,94 @@ h3 {
     margin: .5vmin;
 }
 
+.content__contact-me {
+    padding-top: 5vmin;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content__contact-me a {
+   color: var(--light-one-color);
+   margin-top: 2vmin;
+   margin-bottom: 4vmin;
+}
+
+.content__contact-methods {
+    font-size: 4vmin;  
+}
+
+.content__social-media {
+    height: 30vmin;
+}
+
+.content__social-media p {
+    font-size: 3vmin;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.content__social-media-items {
+    display: flex;
+    justify-content: center;
+    font-size: 12vmin;
+    margin: 3vmin;
+}
+
+.content__my-code {
+   color: var(--light-one-color);
+   font-size: 3vmin;
+   margin-top: 2vmin;
+   margin-bottom: 5vmin;
+}
+
+.content__links-to-my-works {
+    width: 70vmin;
+    height: 50vmin;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.content__links-to-my-works::-webkit-scrollbar {
+    background-color: var(--light-two-color);
+    border-radius: 10px;
+    width: 1.5vmin;
+}
+
+.content__links-to-my-works::-webkit-scrollbar-thumb {
+    background-color: var(--light-one-color);
+    border-radius: 10px;
+}
+
+.content__links-to-my-works__item {
+    width: 30vmin;
+    height: 17vmin;
+    margin: 1vmin;
+    border-radius: 5px;
+    background-color: var(--light-two-color);
+    background-blend-mode: overlay;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.content__links-to-my-works__item__guide {
+    background-image: url('img/guide.jpg'); 
+}
+
+.content__links-to-my-works__item__todolist {
+    background-image: url('img/todolist.png'); 
+}
+
+.content__links-to-my-works__item__game {
+    background-image: url('img/paperstonescissors.png'); 
+}
+
 @media (max-width: 410px) {
     .container {
     height: 90vh;
@@ -202,5 +297,18 @@ h3 {
 
     .content__devicon {
         font-size: 40px;
+    }
+
+    .content__my-code {
+        color: var(--light-one-color);
+        font-size: 5vmin;
+        margin-top: 2vmin;
+        margin-bottom: 5vmin;
+     }
+
+    .content__links-to-my-works__item {
+        width: 60vmin;
+        height: 35vmin;
+        margin: 3vmin;
     }
 }
