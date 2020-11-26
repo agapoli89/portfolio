@@ -14,11 +14,34 @@
 }
 
 body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
     height: 100vh;
     background-color: var(--dark-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.language-choice {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--light-two-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--semi-dark-one-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.language-choice:hover {
+    opacity: .8;
 }
 
 a {
@@ -38,8 +61,6 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 2px;
 }
 
 .start {
@@ -264,6 +285,10 @@ h3 {
 
 .content__links-to-my-works__item__game {
     background-image: url('img/paperstonescissors.png'); 
+}
+
+.content__links-to-my-works__item__breeds-base {
+    background-image: url('img/breeds.png'); 
 }
 
 @media (max-width: 410px) {
