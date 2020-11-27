@@ -67,8 +67,6 @@ squares.forEach(square => square.addEventListener('click', addContent));
 const myProjects = document.querySelectorAll('.content__links-to-my-works__frame-to-item');
 
 myProjects.forEach(project => project.addEventListener('mouseenter', e => {
-    console.log(e.target.firstElementChild);
-
     e.target.firstElementChild.style.opacity = ".1";
     e.target.lastElementChild.style.opacity = "1";
 
@@ -90,7 +88,7 @@ const translate = {
         atr6: "O mnie",
         atr7: "Miłośniczka psów, rowerów miejskich, kuchni roślinnej i&nbsp;górskich wędrówek.",
         atr8: "Mimo, że&nbsp;wykształcenie mam humanistyczne, coraz bardziej pochłania mnie programowanie. Potrafię spędzać godziny analizując i&nbsp;udoskonalając kod, co jak do tej pory sprawia mi olbrzymią frajdę :)",
-        atr9: "Umiejętności",
+        atr9: "Technologie i umiejętności",
         atr10: "Znajdziesz mnie też na mediach społecznościowych:",
         atr11: "Moj kod",
         atr12: "Przewodnik miejski - wizytówka",
@@ -107,7 +105,7 @@ const translate = {
         atr6: "About me:",
         atr7: "Dogs, city bikes, plant-based cousine and hiking lover.",
         atr8: "Though I always thought I have a humanist's soul I feel great in programming. I could spend hours analysing or improving code and I really enjoy it :)",
-        atr9: "Skills",
+        atr9: "Technologies and skills",
         atr10: "You can also find me on Social Media:",
         atr11: "My code",
         atr12: "City guide - business card website",
@@ -117,20 +115,30 @@ const translate = {
     },
 };
 
-document.getElementById('atr1').addEventListener('click', (e) => {
-   let lang = e.target.dataset.lang;
-   if (lang === "pl") {
-       lang = "en";
-       e.target.dataset.lang = "en"; 
-   } else {
-       console.log('polski');
-       lang = "pl";
-       e.target.dataset.lang = "pl"; 
-   }
-   console.log(translate[lang]); 
+const langButton = document.getElementById('atr1');
 
-   for (const [key, val] of Object.entries(translate[lang])) {
-       document.getElementById(key).textContent = val;
-   }  
-   addContent(); 
+const setLanguage = (lang) => {
+    
+    for (const [key, val] of Object.entries(translate[lang])) {
+        document.getElementById(key).textContent = val;
+    }
+    langButton.dataset.lang = lang; 
+}
+
+const checkNavigatorLanguage = () => {
+    const navLang = window.navigator.language.substr(0, 2);
+    setLanguage(navLang);
+}
+
+checkNavigatorLanguage();
+
+langButton.addEventListener('click', (e) => {
+   let lang = e.target.dataset.lang;
+
+   if (lang === "pl") {
+    lang = "en";
+} else {
+    lang = "pl";
+} 
+   setLanguage(lang);  
 });
