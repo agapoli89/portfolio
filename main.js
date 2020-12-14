@@ -1,4 +1,5 @@
 const squares = document.querySelectorAll('.start__square');
+const langButton = document.getElementById('atr1');
 
 let i = 0; //squares
 const start = document.querySelector('.start');
@@ -22,6 +23,7 @@ function backToStart() {
             content[index].style.display = "none";
             start.style.display = "flex";
             setTimeout(() => {
+                langButton.classList.remove('hidden');
                 start.style.opacity = 1;
             }, 100);
             content[index].removeEventListener('transitionend', afterTransitionendContent);
@@ -44,6 +46,7 @@ function addContent() {
             content[index].style.display = "block";
         }
         setTimeout(() => {
+            langButton.classList.add('hidden');
             content[index].style.opacity = 1;
         }, 100);
         start.removeEventListener('transitionend', afterTransitionendStart);
@@ -116,8 +119,6 @@ const translate = {
         atr16: "Calculator",
     },
 };
-
-const langButton = document.getElementById('atr1');
 
 const setLanguage = (lang) => {
     
