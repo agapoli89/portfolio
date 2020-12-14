@@ -276,7 +276,7 @@ h3 {
 }
 
 .content__links-to-my-works__item__guide {
-    background-image: url('img/guide.jpg'); 
+    background-image: url('img/guide.jpg');
 }
 
 .content__links-to-my-works__item__todolist {
@@ -289,6 +289,10 @@ h3 {
 
 .content__links-to-my-works__item__breeds-base {
     background-image: url('img/breeds.png'); 
+}
+
+.content__links-to-my-works__item__calculator {
+    background-image: url('img/calculator.png');
 }
 
 @media (max-width: 410px) {
