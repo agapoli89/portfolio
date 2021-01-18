@@ -99,6 +99,7 @@ const translate = {
         atr14: "Gra 'Papier, kamień, nożyce'",
         atr15: "Baza ras psów",
         atr16: "Kalkulator",
+        atr17: "Lista zakupów",
     },
     en: {
         atr1: "PL",
@@ -117,6 +118,7 @@ const translate = {
         atr14: "Game 'Paper, stone, scissors'",
         atr15: "The dog breed's base",
         atr16: "Calculator",
+        atr17: "Shopping list",
     },
 };
 

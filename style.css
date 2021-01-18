@@ -295,6 +295,10 @@ h3 {
     background-image: url('img/calculator.png');
 }
 
+.content__links-to-my-works__item__shopping-list {
+    background-image: url('img/shoppinglist.png');
+}
+
 @media (max-width: 410px) {
     .container {
         height: 90vh;
