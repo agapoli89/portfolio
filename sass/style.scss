@@ -1,0 +1,316 @@
+@import 'settings';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include setFlex();
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    height: 100vh;
+    background-color: $dark-color;
+    position: relative;
+}
+
+.language-choice {
+    @include setFlex();
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $light-two-color;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    color: $semi-dark-one-color;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+        opacity: .8;
+    }
+}
+
+a {
+    @include setFlex();
+    text-decoration: none;
+}
+
+.container {
+    @include setFlex();
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    height: 80vmin;
+    width: 80vmin;
+    background-color: $dark-color;
+    @include mobile {
+        height: 90vh;
+        width: 90vw;
+        flex-direction: column;
+    }
+}
+
+.start {
+    transition: opacity 1s;
+    &__square {
+        @include setFlex(flex-end);
+        flex-direction: column;
+        width: 35vmin;
+        height: 35vmin;
+        background-color: $light-two-color;
+        margin: 1.5vh;
+        border-radius: 5px;
+        color: $semi-dark-one-color;
+        font-size: 30px;
+        cursor: pointer;
+        transition: opacity 1s;
+        @include mobile {
+            width: 60%;
+            height: 21%;
+            justify-content: center;
+        }
+    }
+    &__img {
+        width: 20vmin;
+        height: auto;
+        @include mobile {
+            width: 30%;
+            height: auto;
+        }
+    }
+    &__welcome {
+        background-color: transparent;
+        color: $light-two-color;
+        justify-content: center;
+        cursor: default;
+        @include mobile {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &__works {
+        background-color: $semi-dark-one-color;
+        color: $light-two-color;
+        font-size: 30px;
+        @include mobile {
+            order: 2;
+        }
+    }
+    &__text {
+        margin-bottom: 5vmin;
+        margin-top: 2vmin;
+        font-size: 3vmin;
+        @include mobile {
+            margin: 0;
+        }
+    } 
+    &__contact {
+        @include mobile {
+        order: 3;
+        }
+    }
+    &:hover > .start__square {
+        opacity: .5;
+        transition: opacity 1s;
+    }
+    &:hover > .start__square:hover {
+        opacity: 1;
+    }
+}
+
+h3 {
+    font-size: 4vmin;
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.content {
+    background-color: $semi-dark-one-color;
+    border-radius: 5px;
+    color: $light-one-color;
+    opacity: 0;
+    padding: 5vmin;
+    position: relative;
+    transition: opacity 1s;
+    display: none;
+    @include mobile {
+        height: 90vh;
+    }
+    &__cross {
+        width: 6vmin;
+        height: auto;
+        position: absolute;
+        top: 1vmin;
+        right: 1vmin;
+        opacity: .6;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__about-me {
+        & p {
+            font-size: 2.5vmin;
+            margin-top: 2vmin;
+            margin-bottom: 2vmin; 
+            text-align: justify; 
+            @include mobile {
+                font-size: 14px;
+                margin-top: 2vmin;
+                margin-bottom: 2vmin;
+            }
+        }
+        & h2 {
+            font-size: 4vmin;
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+        & h4 {
+            margin-bottom: 4px;
+            font-size: 2.5vmin;
+            width: 100%;
+            text-align: center;
+            @include mobile {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__my-tech {
+        @include setFlex();
+        width: 100%;
+        height: 40%;
+        flex-wrap: wrap;
+        margin-top: 5vmin;
+    }
+    &__devicon {
+        font-size: 8vmin;
+        margin: 2vmin;
+        @include mobile {
+            font-size: 40px;
+        }
+    }
+    &__contact-me {
+        padding-top: 5vmin;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        & a {
+            color: $light-one-color;
+            margin-top: 2vmin;
+            margin-bottom: 4vmin;
+         }
+    }
+    &__contact-methods {
+        font-size: 4vmin;  
+        @include mobile {
+            font-size: 6vmin;
+        }
+    }
+    &__social-media {
+        height: 30vmin;
+        & p {
+            font-size: 3vmin;
+            @include setFlex();
+            text-align: center;
+            @include mobile {
+                font-size: 5vmin;
+            }
+        }
+        &-items {
+            display: flex;
+            justify-content: center;
+            font-size: 12vmin;
+            margin: 3vmin;
+            @include mobile {
+                font-size: 15vmin;
+            }
+        }
+    }
+    &__my-code {
+        color: $light-one-color;
+        font-size: 3vmin;
+        margin-top: 2vmin;
+        margin-bottom: 5vmin;
+        @include mobile {
+            color: $light-one-color;
+            font-size: 5vmin;
+            margin-top: 2vmin;
+            margin-bottom: 5vmin;
+        }
+    }
+    &__links-to-my-works {
+        @include setFlex(space-around);
+        flex-wrap: wrap;
+        width: 70vmin;
+        height: 50vmin;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: auto;
+        @include mobile {
+            height: 80%;
+        }
+        &::-webkit-scrollbar {
+            background-color: $light-two-color;
+            border-radius: 10px;
+            width: 1.5vmin;
+            &-thumb {
+                background-color: $light-one-color;
+                border-radius: 10px;
+            }
+        }
+        &__frame-to-item {
+            position: relative;
+        }
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            opacity: 0;
+            text-align: center;
+            font-size: 2.5vmin;
+        }
+        &__item {
+            width: 30vmin;
+            height: 17vmin;
+            margin: 1vmin;
+            border-radius: 5px;
+            background-color:  rgba(191, 154, 154, 1);
+            background-blend-mode: overlay;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            @include mobile {
+                width: 59vmin;
+                height: 33vmin;
+                margin: 3vmin;
+            }
+            &__guide {
+                background-image: url('../img/guide.jpg');
+            }
+            &__todolist {
+                background-image: url('../img/todolist.png'); 
+            }
+            &__game {
+                background-image: url('../img/paperstonescissors.png'); 
+            }
+            &__breeds-base {
+                background-image: url('../img/breeds.png'); 
+            }
+            &__calculator {
+                background-image: url('../img/calculator.png');
+            }
+            &__shopping-list {
+                background-image: url('../img/shoppinglist.png');
+            }
+        }
+    }
+}

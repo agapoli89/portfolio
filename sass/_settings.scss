@@ -1,0 +1,17 @@
+$semi-dark-one-color: rgba(114, 60, 70, 1);
+$light-one-color: rgba(242, 215, 213, 1);
+$semi-dark-two-color: rgba(89, 54, 54, 1);
+$light-two-color: rgba(191, 154, 154, 1);
+$dark-color: rgba(38, 38, 38, 1); 
+
+@mixin setFlex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin mobile {
+    @media screen and (max-width: 410px) {
+        @content;
+    }
+}
