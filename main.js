@@ -123,7 +123,8 @@ const translate = {
 };
 
 const setLanguage = (lang) => {
-    
+    if (lang !== "en" & lang !== "pl") lang = "en";
+
     for (const [key, val] of Object.entries(translate[lang])) {
         document.getElementById(key).textContent = val;
     }
