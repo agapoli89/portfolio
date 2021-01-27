@@ -30,7 +30,7 @@ function backToStart() {
         }
         content[index].style.opacity = 0;
         content[index].addEventListener("transitionend", afterTransitionendContent);
-    }, 200)
+    }, 100)
     removeEventListener('click', backToStart);
 }
 

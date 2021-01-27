@@ -92,8 +92,8 @@ a {
 }
 
 .start {
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
 }
 
 .start__square {
@@ -118,8 +118,8 @@ a {
   color: #723c46;
   font-size: 30px;
   cursor: pointer;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
 }
 
 @media screen and (max-width: 410px) {
@@ -196,8 +196,8 @@ a {
 
 .start:hover > .start__square {
   opacity: .5;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
 }
 
 .start:hover > .start__square:hover {
@@ -211,8 +211,8 @@ h3 {
 
 .hidden {
   opacity: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
 }
 
 .content {
@@ -222,8 +222,8 @@ h3 {
   opacity: 0;
   padding: 5vmin;
   position: relative;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
   display: none;
 }
 
