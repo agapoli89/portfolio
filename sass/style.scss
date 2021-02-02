@@ -271,13 +271,30 @@ h3 {
         }
         &__text {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 100%;
+            @include setFlex();
+            flex-wrap: wrap;
+            flex-direction: column;
             color: white;
             opacity: 0;
             text-align: center;
-            font-size: 2.5vmin;
+            & span {
+                font-size: 2vmin;
+                @include mobile {
+                    font-size: 4vmin;
+                }
+            }
+        }
+        &__container-to-img {
+            @include setFlex();
+            width: 100%;
+        }
+        &__img {
+            max-width: 100%;
+            height: auto;
         }
         &__item {
             width: 30vmin;
