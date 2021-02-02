@@ -468,6 +468,7 @@ h3 {
 
 .content__links-to-my-works__text span {
   font-size: 2vmin;
+  max-width: 90%;
 }
 
 @media screen and (max-width: 410px) {
@@ -492,6 +493,7 @@ h3 {
 .content__links-to-my-works__img {
   max-width: 100%;
   height: auto;
+  margin: 5px;
 }
 
 .content__links-to-my-works__item {

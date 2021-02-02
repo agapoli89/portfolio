@@ -283,6 +283,7 @@ h3 {
             text-align: center;
             & span {
                 font-size: 2vmin;
+                max-width: 90%;
                 @include mobile {
                     font-size: 4vmin;
                 }
@@ -295,6 +296,7 @@ h3 {
         &__img {
             max-width: 100%;
             height: auto;
+            margin: 5px;
         }
         &__item {
             width: 30vmin;
