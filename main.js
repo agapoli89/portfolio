@@ -96,9 +96,9 @@ const translate = {
         atr11: "Moj kod",
         atr12: "Lista zakupów",
         atr13: "Lista 'to-do'",
-        atr14: "Gra 'Papier, kamień, nożyce'",
+        //atr14: "Gra 'Papier, kamień, nożyce'",
         atr15: "Baza ras psów",
-        atr16: "Kalkulator",
+        //atr16: "Kalkulator",
         atr17: "Przewodnik miejski - wizytówka",
     },
     en: {
@@ -115,9 +115,9 @@ const translate = {
         atr11: "My code",
         atr12: "Shopping list",
         atr13: "'To-do' list",
-        atr14: "Game 'Paper, stone, scissors'",
+        //atr14: "Game 'Paper, stone, scissors'",
         atr15: "The dog breed's base",
-        atr16: "Calculator",
+        //atr16: "Calculator",
         atr17: "City guide - business card website",
     },
 };
